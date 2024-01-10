@@ -5,8 +5,10 @@
 Overview
 
 Welcome to our sleep revolution repository! Here, we harness the power of time-frequency distribution techniques and deep neural networks to automate the identification of insomnia using single-channel EEG signals. Sweet dreams are made of this!
+
 🚀 Getting Started
 
+![InsomniaStudy](https://github.com/prince0310/MWTCNN/assets/85225054/f2711131-23ce-4c72-903c-847bc15fe873)
 
 #### 📊 Data acquisition 
 
@@ -22,7 +24,11 @@ in the PSG recordings. To reduce the processing time and
 increase the accuracy of detection, we have segmented the
 whole signal into 1 sec. duration and converted these sub-
 signals into RGB images using continuous wavelet transform
-with Morlet mother wavelet functions and SPWVD
+with Morlet mother wavelet fun. <br> <br>
+
+
+![EEG-recording-1sec-CAP](https://github.com/prince0310/MWTCNN/assets/85225054/e1b37205-2f4a-4d19-aff4-7c64e75f79aa)
+
 
 #### 📈 Scalogram generation
 
@@ -35,7 +41,10 @@ tions and Smoothed pseudo wigner-wille distribution based
 scalograms. Calculating the coefficients scales is done on the
 1sec segment of each signal. Then scalograms are retrieved
 and scaled using bi-cubic interpolation following the specifica-
-tions
+tions.<br> <br>
+
+![scalograms-all](https://github.com/prince0310/MWTCNN/assets/85225054/8b42c178-9878-43ea-9b17-701ce40aba01)
+
 
 #### 🛠️ Transfer Learning
 
@@ -77,7 +86,7 @@ pip install -r requirements.txt
 
 🚀 Note -- edit dataset.py file to provide data path of custom dataset before start training
 
-✨ 🧠  🎲  📊 📈 start training
+✨ 🧠  🎲  📈 start training
  ```python3 main.py --model=googlenet/alexnet/resnet --save_model=True```
  
 #### ✨ Usage
@@ -95,13 +104,22 @@ pip install -r requirements.txt
 🧙‍♂️ Deep Neural Sorcery
 
 * Master the mystical architecture and training process of the deep neural network in the Deep Neural Network documentation.
-🎉 Results Celebration
 
-* Join the celebration of the results obtained from the system in the Results section. Cheers to accurate insomnia detection!
+
+#### 🎉 Results Celebration
+
+📈 Accuracy curve
+![acc_cirves](https://github.com/prince0310/MWTCNN/assets/85225054/de75ae14-816d-42b8-a497-9f9f885870c7)
+
+<br> <br> <br>
+
+📊  Confusion matrix
+![Confusionmatrix(1)](https://github.com/prince0310/MWTCNN/assets/85225054/1d8798d8-e9b1-435f-a33a-13886648de81)
+
+
+
+* Join the celebration of the results obtained from the system in the Results section. Cheers to accurate insomnia classification!
 🤝 Contributing
-
-* Be a part of the magic! Check out CONTRIBUTING.md for guidelines on contributing to this enchanting project.
-📜 License Scroll
 
 * This project is licensed under the [Your License] - see the LICENSE.md file for details.
 🙏 Acknowledgments
