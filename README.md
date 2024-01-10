@@ -108,12 +108,13 @@ pip install -r requirements.txt
 
 #### 🎉 Results Celebration
 
-📈 Accuracy curve
+📈 Accuracy curve <br>
+
 ![acc_cirves](https://github.com/prince0310/MWTCNN/assets/85225054/de75ae14-816d-42b8-a497-9f9f885870c7)
 
-<br> <br> <br>
+<br> <br> 
 
-📊  Confusion matrix
+📊  Confusion matrix <br>
 ![Confusionmatrix(1)](https://github.com/prince0310/MWTCNN/assets/85225054/1d8798d8-e9b1-435f-a33a-13886648de81)
 
 
