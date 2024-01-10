@@ -65,22 +65,21 @@ compared the performance of these models with our proposed
 MWTCNNet model for classification between normal and
 insomniac scalogram
 
-###### To embark on this journey, make sure you have the following magical spells (dependencies) installed:
-
-    Python (version X.X.X) ✨
-    TensorFlow (version X.X.X) 🧠
-    NumPy (version X.X.X) 🎲
-    SciPy (version X.X.X) 📊
-    Matplotlib (version X.X.X) 📈
-    [Other dependencies] 🛠️
-
-#### Clone the repository and cast the spell of installation:
+#### 🎲 Clone the repository and cast the spell of installation:
 
 ```
 git clone https://github.com/yourusername/insomnia-identification.git
 cd insomnia-identification
 pip install -r requirements.txt
 ```
+
+🚀 Note -- edit config.yaml file to set parameters before start training
+
+🚀 Note -- edit dataset.py file to provide data path of custom dataset before start training
+
+✨ 🧠  🎲  📊 📈 start training
+ ```python3 main.py --model=googlenet/alexnet/resnet --save_model=True```
+ 
 #### ✨ Usage
 
 * Follow the enchanting steps in the Usage document to wield the power of insomnia identification.
