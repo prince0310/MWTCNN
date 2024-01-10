@@ -7,6 +7,64 @@ Overview
 Welcome to our sleep revolution repository! Here, we harness the power of time-frequency distribution techniques and deep neural networks to automate the identification of insomnia using single-channel EEG signals. Sweet dreams are made of this!
 🚀 Getting Started
 
+
+#### 📊 Data acquisition 
+
+In this paper, two publicly available databases: CAP - sleep and (ii) SDRC have been used for the experimentation
+
+#### ✨ Data pre-processing and segmentation
+
+The databases recordcontains recording of various signals
+through polysomnography (PSG), including respiratory, EOG,
+EEG, and ECG signals. In our experiment, we focused on
+extracting EEG signals specifically from the C4 − A1 channel
+in the PSG recordings. To reduce the processing time and
+increase the accuracy of detection, we have segmented the
+whole signal into 1 sec. duration and converted these sub-
+signals into RGB images using continuous wavelet transform
+with Morlet mother wavelet functions and SPWVD
+
+#### 📈 Scalogram generation
+
+The scalogram of the signal is extracted using Morlet
+CWT (Continuous wavelet transform). The deep convolutional
+neural network component of the proposed methodology uses
+CWT coefficients as features. This work evaluates the per-
+formance of the proposed method on Morlet wavelet func-
+tions and Smoothed pseudo wigner-wille distribution based
+scalograms. Calculating the coefficients scales is done on the
+1sec segment of each signal. Then scalograms are retrieved
+and scaled using bi-cubic interpolation following the specifica-
+tions
+
+#### 🛠️ Transfer Learning
+
+Large annotated dataset, time, and high computing resources
+are required for training a CNN from scratch than using
+a CNN that has been pre-trained on a huge database [26].
+There are two primary transfer learning scenarios: freezing
+and fine-tuning the layers of CNN architecture. In fine-tuning,
+the weights and biases of a CNN that has already been
+trained are used instead of random initialization, followed by
+a normal training procedure on the unseen dataset. However,
+in another scenario, the pre-trained CNN layers are considered
+to be fixed feature extractors. In this case, the fully connected
+layers are tweaked across the target dataset and number of
+defined classes whereas the biases and weights of our ideal
+convolutional layers remain fixed. The frozen layers are not
+restricted to convolutional layers alone. Frozen layers may
+be fully connected layers or any subset of convolutional;
+nevertheless, it is usual practice to freeze the more superficial
+convolutional layers. In our study, we have used the freezing
+method by freezing all the CNN layers and re-trained the last
+three fully-connected layers with number of output classes
+as two for last layer of AlexNet , GoogLeNet,
+VGG16, ResNet50, and MobileNetV2, using
+the same training pipeline used for the proposed method and
+compared the performance of these models with our proposed
+MWTCNNet model for classification between normal and
+insomniac scalogram
+
 ###### To embark on this journey, make sure you have the following magical spells (dependencies) installed:
 
     Python (version X.X.X) ✨
